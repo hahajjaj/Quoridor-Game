@@ -1,0 +1,35 @@
+Bugs sur la branch GUI sur le commit fdd352d4984dde4b2b5590948f0c9bacb43532a5
+
+    - regler le sigint
+    - pas quitter en tournoi et pas de pause non plus (pour readme)
+
+
+// - Le client ne gère pas la réponse du serveur lorsqu'il sélectionne "Déconnexion" dans le menu principal.
+// - Dans les classements on ne peut plus utiliser les flêches pour scroller le classement.
+// - Dans les règles de jeu non plus. (changer getInput(true) -> getInput() if (input.empty()) break; // ESC)
+// - La méthode BaseDeDonnee::getFriendsClass(string) ne fonctionne plus. Et ne retourne plus rien.
+- Lorsqu'on a pas d'amis il n'y a rien d'aficher. Ajouter un message pour dire que l'on en a pas encore.
+- Lorsqu'on veut accepter une demande d'amis. Si il n'y en pas ajouter un message.
+- Lorqu'on affiche la liste d'amis ou de demande, ajouter un message s'il on en a pas encore/ pas encore recu.
+// - Dans le chat dans le client, lorsqu'on appuie sur ESCAPE il ne se passe rien, on reste blocker dans le chat. Le thread qui recoit les messages reste en attente d'un prochain message avant de faire ca boucle et comprendre qu'il doit s'arreter.
+    Quand l'utilisteur appuie sur ESCAPE, le client doit envoyer le message "mg" au serveur et mettre la variable 'status' a false.
+    Quand le thread receiveThread recoit la réponse du serveur comme quoi il est bien sortis du mode chat. Il doit bine checker que le status est passé a false
+    ca veut dire que le message qu'l a recu est la réponse du message "mg". il doit donc sortir de ca boucle.
+// - Lorsque le client est en de la méthode Menu::getInput(any = true). Il ne reset pas le buffer de l'input, qui reste dans le menu d'après.
+
+// - Check si nb joueur inviter == nb joueur partie
+
+// - Lorsqu'on doit entrer un pseudo d'un amis a inviter dans une partie. Afficher uniquement les amis connecter et pas offline.
+// - Empecher d'envoyer 100000 invite à la même personne, limiter a une invite.
+// - Empecher d'envoyer une invitation a jouer si le joueur n'est pas connecter.
+// - Si on va dans le menu cree une partie, puis qu'on invite qlq'un et qu'il rejoint la partie (il est en attente des autres joueurs). Si on revient en arrière (menu cree partie -> menu jeu). Les autres joueurs reste coincé en attente des autres joueurs.
+    Faudrais ajouter soit le fait que si on revient en arrière, ca envoie un msg au serveur comme quoi faut delete la partie et kick les tout le monde.
+    Ou bien laisser la possibiliter au joueurs de quitter la page d'attente (ESCAPE) et du coup aussi envoyer un message comme quoi faut qu'il quoi il a quitter la partie.
+// - Mettre les murs sur le plateau en couleur pour qu'il resorte mieu. (Perso je les voix seulement parce que je sais que j'en ai poser un)
+?? - On ne peut pas sauter au dessus d'un pion adverse, même s'il y a l'espace derrière.
+- Lorsqu'une partie est finie le thread qui écoute les inputs est blocker en attente d'un move, du coup il n'affiche pas le message de fin de partie.
+    ou bien c'est le thread qui écoute le serveur je sais pas trop.
+    !!! ancien message de fin Jeu.cpp ligne 72
+// - Check que quand le serveur recoit un message pour jouer un move, le joueur est bien dans une partie qui existe si non segfault sur un nullptr.
+// - Quand le serveur envoie la liste des partie sauvergardées, bien les envoyers direct sans espace et dans le bon format
+- ...

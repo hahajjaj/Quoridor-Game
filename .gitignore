@@ -1,0 +1,11 @@
+.DS_STORE
+a.out
+*.swp
+*.o
+*.json
+.vscode
+client
+client2
+serveur
+Quoridor
+!src/**/

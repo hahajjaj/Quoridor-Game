@@ -1,0 +1,9 @@
+	- 5 murs en mode 4 joueurs
+	- enlevé les accents dans les messages serveurs
+
+	- remplacer les int des ecran_actuel par un enum
+	- ajouter systeme d'invitation à jouer dans ecran chat
+	- corriger case possible quand deux pions adjacents
+	
+	- faire les nuages qui se deplacent
+	- nettoyer code
