@@ -21,14 +21,14 @@ It must be large enough to properly display the menu and the game board. Changin
 ## Visual
 
 <p align="center">
-  <img src="https://github.com/hahajjaj/Quoridor-Game/blob/main/imgs/login_screen.png" alt="logscreen" width="300" height="auto"/>
-  <img src="https://github.com/hahajjaj/Quoridor-Game/blob/main/imgs/login_info_screen.png" alt="logscreen2" width="300" height="auto"/>
-  <img src="https://github.com/hahajjaj/Quoridor-Game/blob/main/imgs/main_menu.png" alt="mainMenu" width="300" height="auto"/>
+  <img src="https://github.com/hahajjaj/Quoridor-Game/blob/main/imgs/login_screen.png" alt="logscreen" width="280" height="auto"/>
+  <img src="https://github.com/hahajjaj/Quoridor-Game/blob/main/imgs/login_info_screen.png" alt="logscreen2" width="280" height="auto"/>
+  <img src="https://github.com/hahajjaj/Quoridor-Game/blob/main/imgs/main_menu.png" alt="mainMenu" width="280" height="auto"/>
 </p>
 <p align="center">
-  <img src="https://github.com/hahajjaj/Quoridor-Game/blob/main/imgs/lobby.png" alt="lobby" width="300" height="auto"/>
-  <img src="https://github.com/hahajjaj/Quoridor-Game/blob/main/imgs/friend_list.png" alt="friendlist" width="300" height="auto"/>
-  <img src="https://github.com/hahajjaj/Quoridor-Game/blob/main/imgs/chat_window.png" alt="mainMenu" width="300" height="auto"/>
+  <img src="https://github.com/hahajjaj/Quoridor-Game/blob/main/imgs/lobby.png" alt="lobby" width="280" height="auto"/>
+  <img src="https://github.com/hahajjaj/Quoridor-Game/blob/main/imgs/friend_list.png" alt="friendlist" width="280" height="auto"/>
+  <img src="https://github.com/hahajjaj/Quoridor-Game/blob/main/imgs/chat_window.png" alt="mainMenu" width="280" height="auto"/>
 </p>
 <p align="center">
   <img src="https://github.com/hahajjaj/Quoridor-Game/blob/main/imgs/game.png" alt="lobby" width="300" height="auto"/>
