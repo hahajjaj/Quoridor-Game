@@ -18,6 +18,10 @@ terminal2 = old interface with some display bugs related to ncurses library.
 
 It must be large enough to properly display the menu and the game board. Changing the terminal size while the application is running can cause display issues. Therefore, make sure to open a sufficiently large terminal before launching the application.
 
+## Animated Sprite
+
+![Alt Text](https://github.com/hahajjaj/Quoridor-Game/blob/main/imgs/gif_anim_game.gif)
+
 ## Visual
 
 <p align="center">
