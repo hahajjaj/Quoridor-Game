@@ -20,7 +20,7 @@ It must be large enough to properly display the menu and the game board. Changin
 
 ## Animated Sprite
 
-![Alt Text](https://github.com/hahajjaj/Quoridor-Game/blob/main/imgs/gif_anim_game.gif)
+<img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="250" height="auto" />
 
 ## Visual
 
