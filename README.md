@@ -18,7 +18,24 @@ terminal2 = old interface with some display bugs related to ncurses library.
 
 It must be large enough to properly display the menu and the game board. Changing the terminal size while the application is running can cause display issues. Therefore, make sure to open a sufficiently large terminal before launching the application.
 
- 
+## Visual
+
+<p align="center">
+  <img src="https://github.com/hahajjaj/Quoridor-Game/blob/main/imgs/login_screen.png" alt="logscreen" width="280" height="auto"/>
+  <img src="https://github.com/hahajjaj/Quoridor-Game/blob/main/imgs/login_info_screen.png" alt="logscreen2" width="280" height="auto"/>
+</p>
+<p align="center">
+ <img src="https://github.com/hahajjaj/Quoridor-Game/blob/main/imgs/main_menu.png" alt="mainMenu" width="280" height="auto"/>
+  <img src="https://github.com/hahajjaj/Quoridor-Game/blob/main/imgs/lobby.png" alt="lobby" width="280" height="auto"/>
+ </p>
+ <p align="center">
+  <img src="https://github.com/hahajjaj/Quoridor-Game/blob/main/imgs/friend_list.png" alt="friendlist" width="280" height="auto"/>
+  <img src="https://github.com/hahajjaj/Quoridor-Game/blob/main/imgs/chat_window.png" alt="mainMenu" width="280" height="auto"/>
+</p>
+<p align="center">
+  <img src="https://github.com/hahajjaj/Quoridor-Game/blob/main/imgs/game.png" alt="lobby" width="300" height="auto"/>
+</p>
+
 ## Game Instructions
 
 To play, the opposing player must be in the friend list. The user must go to "Play", "Create a game", and configure the game options (i.e., game mode, number of players). They must then invite a player (if it is a 2-player game) or 3 players (in the case of a 4-player game). Finally, they must press "Start game". They will be put on hold until the opposing player joins. 
