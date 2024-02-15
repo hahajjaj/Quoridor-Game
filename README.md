@@ -1,10 +1,8 @@
-## Personnes ayant contribué au projet (phase 3)
-- Hajjaj Hamza, Mondesir Stan, Piraux Lionel, Ehlalouch Safouan, Ayoub Afif. (5 étudiants sur 9)
+# Quoridor Game
 
-
-## Lancement des exécutables
-Il faut utiliser la commande make sur le terminal pour compiler tous les fichiers.
-Serveur : 
+## Launching Executables
+To compile all files, the make command must be used in the terminal.
+Server:
 
 ./serveur \<port\>
  
@@ -12,84 +10,83 @@ Client :
 
 ./client \<address ip\> \<port\> \<terminal/gui\>
  
-terminal = interface principal fonctionelle (par défaut).
-terminal2 = ancienne interface contenant certains bugs d'affichage liés à libraire ncurses.
+terminal = main functional interface (default).
+terminal2 = old interface with some display bugs related to ncurses library.
 
  
-## Taille du terminal 
- 
-Celui-ci doit être suffisament grand pour afficher correctement le menu ainsi que le plateau de jeu. La modification de la taille du terminal lorsque l'application est lancée peut causer des problèmes d'affichages. Il faut donc veiller à ouvrir un terminal assez grand avant de lancer l'application.
+## Terminal Size
+
+It must be large enough to properly display the menu and the game board. Changing the terminal size while the application is running can cause display issues. Therefore, make sure to open a sufficiently large terminal before launching the application.
 
  
-## Mode d'emploi du jeu
+## Game Instructions
 
-Pour jouer, il faut que le joueur adverse soit dans la liste d'ami. Il faut que l'utilisateur se rende dans "Jouer", "Créer une partie", et qu'il configure les options de sa partie (c'est à dire le mode de jeu, le nombre de joueurs). Il doit ensuite inviter un joueur (s'il s'agit d'une partie à 2 joueurs) ou 3 joueurs (dans le cas d'une partie à 4 joueurs). Et enfin, il doit appuyer sur "Lancer la partie". Il sera mis en attente tant que le joueurs adverse n'a pas rejoins. 
+To play, the opposing player must be in the friend list. The user must go to "Play", "Create a game", and configure the game options (i.e., game mode, number of players). They must then invite a player (if it is a 2-player game) or 3 players (in the case of a 4-player game). Finally, they must press "Start game". They will be put on hold until the opposing player joins. 
  
-Une fois l'invitation envoyé, l'adversaire pourra la trouver dans la section "Voir les invitations à jouer".
-Pour rejoindre la partie, il faut taper le pseudo du joueur qui invite. Et enfin la partie peut commencer. 
+Once the invitation is sent, the opponent can find it in the "View game invitations" section.
+To join the game, the opponent's username must be entered. And finally, the game can begin.
 
-Il y a 3 modes de jeu possible:
- - Jouer une partie normale en 1 vs 1 (partie à deux joueurs) ou 1 vs 1 vs 1 vs 1 (partie à 4 joueurs).
- - Jouer une partie en mode Item (deux items disponible, suppression de mur avec la touche s, et saut de mur)
- - Jouer en mode tournoi
+There are 3 possible game modes:
 
-Utilisez le curseur pour deplacer un pion
- - Utilisez les flèches pour deplacer le curseur
- - Utilisez la touche Enter pour valider un choix
+* Play a normal game in 1 vs 1 (two-player game) or 1 vs 1 vs 1 vs 1 (four-player game).
+* Play a game in Item mode (two items available, wall removal with the s key, and wall jumping)
+* Play in tournament mode
+
+Use the cursor to move a pawn
+
+* Use the arrows to move the cursor
+* Use the Enter key to confirm a choice
 
 
-Pour passer le curseur en mode mur, utilisez la touche m. Une fois fait, vous pourrez utiliser la rotation de mur a l'aide de la touche r.
+To switch the cursor to wall mode, use the m key. Once done, you can rotate the wall using the r key.
 
-Une partie peut être mise en pause à l'aide de la touche x. Celle ci sera sauvegardé et pourra être récupérer ultérieurement via la l'option "reprise d'une partie sauvegardée. Ces joueurs seront ensuite invités à rejoindre la partie sauvegardée et doivent la rejoindre via l'option "Voir mes invitations à jouer". La partie sera lancée une fois que tous les joueurs auront accepter l'invitation. 
+A game can be paused using the x key. It will be saved and can be resumed later via the "resume a saved game" option. These players will then be invited to rejoin the saved game and must do so via the "View my game invitations" option. The game will start once all players have accepted the invitation.
  
- ## Tournois
+ ## Tournaments
  
- Pour lancer le mode de jeu tournoi, il faut le selectionner lors de la création d'une partie dans la section "mode de jeu". Et ensuite il doit inviter tous les joueurs du tournoi et pour finir lancer ca partie.
- 
- En mode tournoi les joueurs invités par l'organisateur du tournoi sont placer dans des partie 1 vs 1. 
- Si le nombre de joueurs est impair, le joueur en plus est considéré comme vainqueur par défaut.
- Quand toutes les parties sont fini un nouveau round commence avec les vainqueurs du dernier round.
+ To launch tournament mode, it must be selected when creating a game in the "game mode" section. Then the organizer must invite all the tournament players and finally start their game.
+
+In tournament mode, players invited by the organizer are placed in 1 vs 1 games.
+If the number of players is odd, the extra player is considered the default winner.
+When all the games are finished, a new round starts with the winners of the last round.
 
  ## Item
-Lors du mode de jeu Item, deux items sont disponibles. Un offrant la possibilité de supprimer un mur en appuyant sur la touche "s" du clavier. Et l'autre permettant de traverser un seul mur. Les items sont utilisable qu'une seule fois, une fois consommé le pouvoir attribué par l'item n'est plus actif. 
+In Item game mode, two items are available. One offers the possibility to delete a wall by pressing the "s" key on the keyboard. And the other allows crossing a single wall. Items are usable only once; once consumed, the power provided by the item is no longer active.
  
- . 
- ## Pause et reprise d'une partie sauvegardée 
- En partie, pour effectuer une pause, le joueur doit appuyer sur la touche "x". La partie est alors terminée et sauvegardée. Les deux joueurs peuvent la reprendre, pour cela, un joueur doit aller dans l'option "reprendre une partie sauvegardée" et il doit choisir la partie sauvegardée à reprendre. Il selectionne à l'aide des flèches la partie qu'il veut reprendre.  Les joueurs concernés recevront une demande d'invitation et doivent se rendre dans la section "Voir mes invitations à jouer" et accepter l'invitation pour rejoindre la partie sauvegardée. 
  
-Remarque : la pause et reprise d'une partie sauvegardée n'est possible que lors d'une partie "normale" (c'est à dire sans le mode de jeu Item ou Tournoi). Dans le cas contraire, celle-ci n'est pas possible. 
+ ## Pause and Resume a Saved Game
+ In-game, to pause, the player must press the "x" key. The game is then ended and saved. Both players can resume it; for this, a player must go to the "resume a saved game" option and must choose the saved game to resume. They select the game they want to resume using the arrows. The concerned players will receive an invitation request and must go to the "View my game invitations" section and accept the invitation to join the saved game.
+
+Note: pausing and resuming a saved game is only possible during a "normal" game (i.e., without the Item or Tournament game mode). Otherwise, it is not possible.
  
 
  
-## La gestion des amis 
-L'ajout d'un amis se fait par l'envoi d'une demande d'ami. Le joueur concerné doit accepter cette demande dans "accepter une demande d'ami", il doit entrer le pseudo du joueur qui l'a invité. Ainsi, les deux joueurs sont amis et il est possible de voir sa liste d'amis dans la section "Afficher ma liste d'amis". Pleins d'autres options sont également disponible comme le classement,afficher la liste des demandes d'amis, etc.. 
+## Friend Management
+Adding a friend is done by sending a friend request. The concerned player must accept this request in "accept a friend request," they must enter the username of the player who invited them. Thus, the two players are friends, and it is possible to see their friend list in the "Display my friend list" section. Many other options are also available, such as ranking, displaying the list of friend requests, etc..
  
- ## Messagerie
-Il est possible d'envoyer un message à un ami lorsqu'il est connecté ou non. Dans le cas ou ce dernier n'est pas connecté, il recevra quand même les messages et les verras lorsqu'il entrera dans la conversation avec le joueur concerné. Une conversation n'est pas autorisé entre 3 joueurs simultanément. Un joueur ne peut pas chatter avec un autre joueur qui chatte en même temps. Cependant, deux amis peuvent discuter entre-eux pendant que deux autres amis chattent ensemble. 
+ ## Messaging
+It is possible to send a message to a friend whether they are connected or not. In case the latter is not connected, they will still receive the messages and see them when they enter the conversation with the concerned player. A conversation is not allowed between 3 players simultaneously. A player cannot chat with another player who is chatting at the same time. However, two friends can talk to each other while two other friends chat together.
 
-Remarque : il n'est possible à l'utilisateur de chatter avec un ami que dans cette section bien spécifique, il n'est pas autorisé à chatter lors d'une partie. 
+Note: it is only possible for the user to chat with a friend in this specific section; it is not authorized to chat during a game. 
 
-## Partie GUI 
-Toutes les fonctionnalités (les parties normales à deux joueurs ou à 4 joueurs, le mode item, le mode tournoi ainsi que la pause et reprise d'une partie sauvegardée) ont étés implémentées dans la GUI comme dans le terminal. Le classement, la gestion d'amis (Ajout et suppression d'un ami, chat, afficher liste d'amis ,etc..) fonctionnent également sans soucis. Les bugs mentionnées ci-dessus, pour la version terminal, ne s'appliquent pas à la GUI. 
+## GUI Part
+All functionalities (normal games for two or four players, item mode, tournament mode, as well as pause and resume a saved game) have been implemented in the GUI as in the terminal. Ranking, friend management (adding and removing a friend, chat, display friend list, etc.) also work without any issues. The bugs mentioned above for the terminal version do not apply to the GUI.
 
-En ce qui concerne l'utilisation de la GUI, celle-ci est intuitive. Pour jouer un coup lors d'une partie il suffit de cliquer sur le pion et ensuite sur la case sur laquelle le joueur veut se déplacer. Pour poser un murs, il cliquer entre les case à l'endroit souhaité.  
+Regarding the use of the GUI, it is intuitive. To play a move during a game, just click on the pawn and then on the square to which the player wants to move. To place walls, click between the squares at the desired location.  
 
-## Librairie graphique utilisée 
-Il faut installer la libraire smfl au préalable. Il faut lancer le script configure.sh au préalable qui va lancer l'installation de la librairie sfml. Le jeu est compatible sur une machine ayant comme système d’exploitation GNU/Linux.
-## Lancement de la GUI
-Le lancement de la gui se fait de cette manière : 
-Il faut d'abord compiler les fichiers à l'aide de la commande make -B.
-Pour lancer le serveur => ./serveur \<port\>
-Pour lancer le client en gui => ./client \<address ip\> \<port\> \<gui\>
+## Graphical Library Used
+The smfl library must be installed beforehand. The configure.sh script must be run beforehand, which will launch the installation of the sfml library. The game is compatible on a machine with GNU/Linux as the operating system.
+## Launching the GUI
+The GUI is launched in this way:
+First, compile the files using the make -B command.
+To launch the server => ./server <port>
+To launch the client in gui => ./client <ip address> <port> <gui>
 
-En mode Item, on n'a besoin d'actionner seulement la bombe pour detruire un mur, pour l'autre item, il suffit simplement de traverser un mur.
-La résolution peut être changé dans la section paramètre du menu principal.
-Il n'y a aucun bug connu dans la version GUI jusqu'à aujourd'hui
+In Item mode, only the bomb needs to be activated to destroy a wall; for the other item, simply cross a wall.
+The resolution can be changed in the settings section of the main menu.
+There are no known bugs in the GUI version to date
 
 
 
-## Compatibilité 
-Un client en terminal peut jouer une partie, chatter, etc.. avec un client en GUI. Le serveur se comporte de la même manière avec les deux types de clients (GUI ou terminal). 
-
-## Remarques 
-Le SRD a été mis à jour en fonction des changements que nous avons effectués. 
+## Compatibility
+A terminal client can play a game, chat, etc., with a GUI client. The server behaves the same way with both types of clients (GUI or terminal).
